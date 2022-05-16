@@ -7,7 +7,7 @@ import "./App.css";
 import { useEffect, useState } from "react";
 
 const App = () => {
-  const [newId, setNewId] = useState("#");
+  const [newId, setNewId] = useState("0");
   const [newAdvice, setNewAdvice] = useState("Click the button to generate a new advice.");
   
 
