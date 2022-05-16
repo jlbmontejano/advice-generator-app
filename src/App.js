@@ -8,13 +8,21 @@ import { useEffect, useState } from "react";
 
 const App = () => {
   const [newId, setNewId] = useState("0");
-  const [newAdvice, setNewAdvice] = useState("Click the button to generate a new advice.");
-  
-
-  let imgSource = MobileDivider;
-
+  const [newAdvice, setNewAdvice] = useState(
+    "Click the button to generate a new advice."
+  );
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+  const generateAdvice = () => {
+    fetch("https://api.adviceslip.com/advice")
+      .then(res => res.json())
+      .then(data => {
+        setNewId(data.slip.id);
+        setNewAdvice(data.slip.advice);
+      });
+  };
+
+  //Change between dividers depending on window width
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
 
@@ -23,6 +31,8 @@ const App = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, [windowWidth]);
+
+  let imgSource = MobileDivider;
 
   if (windowWidth > 600) {
     imgSource = DesktopDivider;
@@ -34,18 +44,8 @@ const App = () => {
     <div className="App">
       <Number id={newId} />
       <Advice advice={newAdvice} />
-
       <img src={imgSource} alt="mob-divider" />
-      <button
-        onClick={() => {
-          fetch("https://api.adviceslip.com/advice")
-            .then(res => res.json())
-            .then(data => {
-              setNewId(data.slip.id);
-              setNewAdvice(data.slip.advice);
-            });
-        }}
-      >
+      <button onClick={() => generateAdvice()}>
         <img src={Dice} alt="button-icon" />
       </button>
     </div>
