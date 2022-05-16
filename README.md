@@ -5,8 +5,6 @@
 - [Screenshots](#screenshots)
 - [Author](#author)
 
-Note: Advice is cached for 2 seconds. Any repeat-request within 2 seconds will return the same piece of advice.
-
 ## Overview
 
 Users should be able to:
@@ -33,3 +31,7 @@ Users should be able to:
 
 - LinkedIn - [@jlbmontejano](https://www.linkedin.com/in/jlbmontejano/)
 - Frontend Mentor - [@jlbmontejano](https://www.frontendmentor.io/profile/jlbmontejano)
+
+API used: https://api.adviceslip.com/
+
+**Note from the API Author:** Advice is cached for 2 seconds. Any repeat-request within 2 seconds will return the same piece of advice.
