@@ -18,8 +18,13 @@ Users should be able to:
 
 ## Screenshots
 
+### Desktop Design
 ![desktop-design](https://user-images.githubusercontent.com/99704047/168683337-e37541f3-18f2-4c00-aca8-e6e0f3d7dd6f.jpg)
+
+### Mobile Design
 ![mobile-design](https://user-images.githubusercontent.com/99704047/168683391-820c8df6-6760-4461-bc14-e8a1fa7b5cbf.jpg)
+
+### Active States
 ![active-states](https://user-images.githubusercontent.com/99704047/168683402-babe249b-bf7a-4b76-8eeb-141346fc89d1.jpg)
 
 ## Author
