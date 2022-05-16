@@ -1,7 +1,11 @@
 import React from "react";
 
-const Advice = () => {
-  return <div></div>;
+const Advice = ({ advice }) => {
+  return (
+    <div>
+      <p>{`${advice}`}</p>
+    </div>
+  );
 };
 
 export default Advice;

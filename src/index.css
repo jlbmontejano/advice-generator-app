@@ -19,5 +19,26 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-size: 28px;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--clr-dark-blue);
+  color: var(--clr-light-cyan);
+  font-family: 'Manrope', sans-serif;
+  font-size: 22px;
+  font-weight: var(--fw-light);
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 28px
+  }
 }
