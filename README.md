@@ -5,6 +5,8 @@
 - [Screenshots](#screenshots)
 - [Author](#author)
 
+Note: Advice is cached for 2 seconds. Any repeat-request within 2 seconds will return the same piece of advice.
+
 ## Overview
 
 Users should be able to:
