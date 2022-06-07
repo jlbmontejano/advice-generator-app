@@ -1,6 +1,3 @@
-import MobileDivider from "./images/pattern-divider-mobile.svg";
-import DesktopDivider from "./images/pattern-divider-desktop.svg";
-import Dice from "./images/icon-dice.svg";
 import "./App.css";
 import { useEffect, useState } from "react";
 
@@ -10,13 +7,6 @@ const App = () => {
     "Click the button to generate a new advice."
   );
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  let imgSource = MobileDivider;
-
-  if (windowWidth > 600) {
-    imgSource = DesktopDivider;
-  } else {
-    imgSource = MobileDivider;
-  }
 
   //Change between dividers depending on window width
   useEffect(() => {
@@ -42,9 +32,22 @@ const App = () => {
     <div className="App">
       <p className="advice-id">{`ADVICE #${newId}`}</p>
       <p className="advice-adv">{`${newAdvice}`}</p>
-      <img src={imgSource} alt="mob-divider" />
+      {windowWidth < 600 ? (
+        <img
+          src={process.env.PUBLIC_URL + "images/divider-mobile.svg"}
+          alt="mobile-divider"
+        />
+      ) : (
+        <img
+          src={process.env.PUBLIC_URL + "images/divider-desktop.svg"}
+          alt="desktop-divider"
+        />
+      )}
       <button onClick={() => generateAdvice()}>
-        <img src={Dice} alt="button-icon" />
+        <img
+          src={process.env.PUBLIC_URL + "images/icon-dice.svg"}
+          alt="button-icon"
+        />
       </button>
     </div>
   );
