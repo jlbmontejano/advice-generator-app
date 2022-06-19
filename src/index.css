@@ -24,10 +24,11 @@ body {
 #root {
   display: flex;
   align-items: center;
-  height: 100vh;
 }
 
 body {
+  display: grid;
+  align-items: center;
   height: 100vh;
   background-color: var(--clr-dark-blue);
   color: var(--clr-light-cyan);

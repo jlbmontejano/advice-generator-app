@@ -1,12 +1,11 @@
 .App {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: .5fr 2fr .5fr 1fr;
     align-items: center;
+    justify-items: center;
     margin: 0 auto;
-    width: 90%;
+    width: 95%;
     max-width: 600px;
-    height: 400px;
     background-color: var(--clr-dark-grayish-blue);
     border-radius: 1em;
     padding: 1.25em;
@@ -34,6 +33,10 @@ button {
 button:hover {
     cursor: pointer;
     box-shadow: 0 0 10px 3px var(--clr-neon-green);
+}
+
+button:active {
+    transform: scale(.9);
 }
 
 @media (min-width: 600px) {
